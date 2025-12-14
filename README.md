@@ -1,4 +1,4 @@
-# Maze-Solver
+# Maze Solver 
 Visualization of maze solving using Greedy Best-First Search
 
 ## Evaluation Function
