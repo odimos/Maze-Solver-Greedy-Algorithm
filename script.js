@@ -7,6 +7,9 @@ let path;
 let state=0;
 let fr = 20;
 
+let width=600;
+let height=600;
+
 window.onload = ()=>{
     document.querySelectorAll('button').forEach(btn=>{
         btn.addEventListener('click',()=>{
@@ -41,11 +44,24 @@ window.onload = ()=>{
 
 
 function setup(){
-    
-    let width=600, height=600;
+
+    const innerHeight = window.innerHeight;
+    const innerWidth = window.innerWidth;
+    width = 600;
+    height = 600;
+    console.log(innerHeight, innerWidth)
+    if (innerHeight<600 || innerWidth<600){
+        console.log('resizing')
+        const size = Math.min(innerWidth, innerHeight);
+
+        width  = size-100;
+        height = size-100;
+    }
+
+    //let width=600, height=600;
     let canvas = createCanvas(width,height)
-    fill(50);
-    rect(0, 0, 600, 600);
+    fill(0);
+    rect(0, 0, width, height);
 
     canvas.parent("c");
     frameRate(20)
@@ -117,12 +133,10 @@ function draw(){
     frameRate(Math.floor(fr))
         
     if(!state){
-        fill(50,50,50,0.4);
-        rect(00, 0, 600, 200);
 
-        fill(200, 0, 0);
-        textSize(42);
-        text('Choose the maze', 30, 100);
+        fill(250, 0, 0);
+        textSize(32);
+        text('Choose Maze', width/2 - textWidth('Choose Maze')/2, 100);
         
         return;
     } if (state==2){
