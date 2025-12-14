@@ -1,5 +1,3 @@
-![Maze](exibit.gif)
-
 # Maze-Solver
 Visualization of maze solving using the A* search algorithm.
 
@@ -10,3 +8,5 @@ f(n) = h(n)
 
 ## Technologies
 HTML, CSS, JavaScript, p5.js
+
+![Maze](exibit.gif)
