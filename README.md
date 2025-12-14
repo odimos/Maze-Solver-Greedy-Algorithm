@@ -1,4 +1,4 @@
-![Maze](assets/exibit.gif)
+![Maze](exibit.gif)
 
 # Maze-Solver
 Visualization of maze solving using the A* search algorithm.
